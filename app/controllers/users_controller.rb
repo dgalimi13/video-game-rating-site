@@ -11,7 +11,8 @@ class UsersController < ApplicationController
             redirect_to user_path(@user)
         else 
             flash[:error] = "Sorry, Register info was invalid. Please try again"
-            render :new 
+            redirect_to signup_path
+            
         end 
     end 
 
