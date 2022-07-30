@@ -21,11 +21,9 @@ ActiveRecord::Schema.define(version: 2022_07_25_141632) do
   create_table "games", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "console_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["console_id"], name: "index_games_on_console_id"
     t.index ["user_id"], name: "index_games_on_user_id"
   end
 
@@ -33,12 +31,8 @@ ActiveRecord::Schema.define(version: 2022_07_25_141632) do
     t.integer "stars"
     t.string "title"
     t.string "content"
-    t.integer "user_id", null: false
-    t.integer "game_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["game_id"], name: "index_reviews_on_game_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,8 +42,5 @@ ActiveRecord::Schema.define(version: 2022_07_25_141632) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "games", "consoles"
   add_foreign_key "games", "users"
-  add_foreign_key "reviews", "games"
-  add_foreign_key "reviews", "users"
 end
