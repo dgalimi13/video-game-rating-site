@@ -1,0 +1,7 @@
+<h1>All the Games</h1>
+
+<% @games.each do |g| %>
+
+    <h2><%= link_to g.name, game_path(g.id)%> - %<= g.description %></h2>
+
+    <% end %>
