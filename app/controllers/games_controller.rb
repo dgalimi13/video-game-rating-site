@@ -25,6 +25,17 @@ class GamesController < ApplicationController
     def show
     end 
 
+    def edit 
+    end 
+
+    def update 
+        if @guitar.update(game_params)
+            redirect_to game_path(@game)
+        else
+            render :edit 
+        end 
+    end 
+
     private 
 
     def game_params
