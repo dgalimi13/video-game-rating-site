@@ -29,7 +29,7 @@ class GamesController < ApplicationController
     end 
 
     def update 
-        if @guitar.update(game_params)
+        if @game.update(game_params)
             redirect_to game_path(@game)
         else
             render :edit 

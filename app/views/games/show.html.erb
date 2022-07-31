@@ -2,3 +2,5 @@
 <h2>Console: <%= @game.console.name %>
 
 <h3>Added by: <%= @game.user.username %><h3>
+
+<%= link_to "Edit #{@game.name} " " - " " #{@game.console.name}", edit_game_path(@game) if @game.user == current_user %>
