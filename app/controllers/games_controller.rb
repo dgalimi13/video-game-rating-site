@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
     before_action :redirect_if_not_logged_in
+    before_action :set_game, only: [:show]
    
     def index  
         @games = Game.all
@@ -20,6 +21,10 @@ class GamesController < ApplicationController
     end
 
     private 
+
+    def set_game
+        @game = Game.find_by_id(params[:id])
+        redirect_to games_path if !@game
 
     def game_params
         params.require(:game).permit(:name, :description)
