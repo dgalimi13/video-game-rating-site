@@ -1,7 +1,7 @@
 class ConsolesController < ApplicationController
 
     def index
-        @consoles = Game.all
+        @consoles = Console.all
     end
 
 end
