@@ -8,6 +8,7 @@ class GamesController < ApplicationController
 
     def new
         @game = Game.new
+        @game.build_console
     end 
 
     def create
