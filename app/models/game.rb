@@ -2,7 +2,7 @@ class Game < ApplicationRecord
   belongs_to :console
   belongs_to :user
   validates :name, presence: true
-  validates :not_a_duplicate
+  validate :not_a_duplicate
   # has_many :reviews
   # has_many :users, through: :reviews
 
