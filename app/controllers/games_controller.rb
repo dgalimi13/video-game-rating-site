@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
     before_action :redirect_if_not_logged_in
-    before_action :set_game, only: [:show]
+    before_action :set_game, only: [:show, :edit, :update]
    
     def index  
         @games = Game.all
