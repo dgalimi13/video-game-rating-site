@@ -2,6 +2,8 @@
 
 <% @games.each do |g| %>
 
-    <h2><%= link_to g.name, game_path(g.id)%> - <%= g.description %></h2>
-
+    <h2><%= link_to g.name, game_path(g.id)%> - <%= g.console.name %></h2>
+    <div>
+        <p><%= g.description %></p>
+    </div>
     <% end %>
