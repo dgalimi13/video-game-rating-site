@@ -25,6 +25,7 @@ class GamesController < ApplicationController
     def set_game
         @game = Game.find_by_id(params[:id])
         redirect_to games_path if !@game
+    end 
 
     def game_params
         params.require(:game).permit(:name, :description)
