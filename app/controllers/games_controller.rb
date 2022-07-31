@@ -18,6 +18,7 @@ class GamesController < ApplicationController
             redirect_to game_path(@game)
         else
             render :new
+            @game.build_console
         end 
     end
 
