@@ -9,6 +9,7 @@ class Game < ApplicationRecord
   def not_a_duplicate
     if Game.find_by(name: name, console_id: console_id)
       errors.add(:name, "has already been added for that make")
+    end 
   end 
 
   def console_attributes=(attributes)
