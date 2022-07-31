@@ -17,10 +17,14 @@ class GamesController < ApplicationController
         if @game.save
             redirect_to game_path(@game)
         else
-            render :new
             @game.build_console
+            render :new
+            
         end 
     end
+
+    def show
+    end 
 
     private 
 
