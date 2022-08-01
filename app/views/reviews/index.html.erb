@@ -3,3 +3,12 @@
 <% else %>
 <h1> All the Reviews </h1>
 <% end %>
+
+<ul>
+    <% @reviews.each do |review| %>
+        <li>
+            <%= review.game.console.name %> - <%= review.game.name %>: <%= review.title %> - <%= review.stars %> added by <%= review.user.username %>
+            <br>
+        </li>
+    <% end %>
+<ul>
