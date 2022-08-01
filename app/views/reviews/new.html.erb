@@ -1,7 +1,7 @@
-<%= display_header(@review)
+<%= display_header(@review) %>
 
 <%= form_for(@review) do |f| %>
-    %< if params[:game_id] %>
+    <% if params[:game_id] %>
         <%= f.hidden_field :game_id %>
     <% else %>
     <div>
