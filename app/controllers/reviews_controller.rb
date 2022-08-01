@@ -1,8 +1,8 @@
 class ReviewsController < ApplicationController
 
     def new 
-        if @guitar = Guitar.find_by_id(params[:guitar_id])
-            @review = @guitar.reviews.build 
+        if @game = Game.find_by_id(params[:game_id])
+            @review = @game.reviews.build 
         else
             @review = Review.new 
         end 
