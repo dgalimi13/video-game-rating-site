@@ -3,6 +3,7 @@
 <% @games.each do |g| %>
 
     <h2><%= link_to g.name, game_path(g.id)%> - <%= g.console.name %></h2>
+    <%= link_to "Write an review", new_game_review_path(g.id) %>
     <div>
         <p><%= g.description %></p>
     </div>
