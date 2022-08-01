@@ -21,6 +21,14 @@ class ReviewsController < ApplicationController
         @review = Review.find_by_id(params[:id])
     end
 
+    def index 
+        if @guitar = Guitar.find_by(params[:game_id])
+            @reviews = @guitar.reviews
+        else 
+            @reviews = Review.all
+        end 
+    end 
+
     private
 
     def review_params
