@@ -1,5 +1,8 @@
 <%= display_header(@review) %>
 
+<%= render partial: 'layouts/errors', locals: {object: @review} %>
+
+
 <%= form_for(@review) do |f| %>
     <% if params[:game_id] %>
         <%= f.hidden_field :game_id %>
