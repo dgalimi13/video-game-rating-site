@@ -1,10 +1,11 @@
 class Game < ApplicationRecord
   belongs_to :console
   belongs_to :user
-  validates :name, presence: true
-  validate :not_a_duplicate
   has_many :reviews
   has_many :users, through: :reviews
+
+  validates :name, presence: true
+  validate :not_a_duplicate
 
   def not_a_duplicate
     if Game.find_by(name: name, console_id: console_id)
