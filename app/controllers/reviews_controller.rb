@@ -22,8 +22,8 @@ class ReviewsController < ApplicationController
     end
 
     def index 
-        if @guitar = Guitar.find_by(params[:game_id])
-            @reviews = @guitar.reviews
+        if @game = Game.find_by(params[:game_id])
+            @reviews = @game.reviews
         else 
             @reviews = Review.all
         end 
