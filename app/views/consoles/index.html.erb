@@ -2,6 +2,7 @@
 
 <ol>
     <% @consoles.each do |console| %>
-        <li><%= console.name %></li>
+        <li><%= link_to console.name, console_path(console) %></li>
     <% end %>
 </ol>
+
