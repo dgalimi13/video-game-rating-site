@@ -8,11 +8,20 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      body {
+        background-image: url('https://previews.123rf.com/images/zoaarts/zoaarts1902/zoaarts190200052/124182568-vector-seamless-old-retro-video-game-background-classic-style-game-design-scenery-.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+      }
+  </style>
   </head>
 
   <div>
   <div><%= render_nav_bar %></div>
   </div>
+  
 
   <body>
     <%= yield %>
