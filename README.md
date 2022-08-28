@@ -1,24 +1,7 @@
-# README
+This Project is a Content Management System using Ruby on Rails to CRUD a users Video Games and Consoles.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Begin the app by running 'rails s' and opening the local host server.
 
-Things you may want to cover:
+at the home page you will be prompted to signup or login
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+a user must signup in order to create Video Games, Consoles and Reviews.
